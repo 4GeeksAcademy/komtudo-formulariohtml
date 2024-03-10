@@ -68,13 +68,13 @@
             <!--Row Datos Persona-->
             <div class="row">
                 <div class="col-md-6">
-                    First name
+                    <label for="state" class="form-label">First name</label>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" aria-label="FirstName" aria-describedby="basic-addon1">
                     </div>
                 </div>
                 <div class="col-md-6">
-                    Last name
+                    <label for="state" class="form-label">Last name</label>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" aria-label="LastName" aria-describedby="basic-addon1">
                     </div>
@@ -108,7 +108,7 @@
                 </div>
 
                 <div class="col-md-3">
-                    Postal code
+                    <label for="state" class="form-label">Postal code</label>
                     <div class="input-group mb-3">
                         <input type="number" class="form-control" aria-label="PostalCode"
                             aria-describedby="basic-addon1">
@@ -122,95 +122,47 @@
 
 
             <!--Row Tipos Pago + Mensaje -->
-            <div class="row d-flex flex-nowrap">
+            <div class="row">
 
                 <!--Row Tipos Pago-->
-                <div class="col-md-6 " >
-            
-                        <div class="row">
-                            <label for="acceptedCards" id="acceptedCards" class="form-check-label" >Weaccept:</label>
-                        </div>
-                        
-                        <div class="row col-md-6 bg-secondary p-2 rounded-2 ms-1 mt-2">
-                            <div class="col-md-3">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <input class="form-check-input" type="radio" name="action" id="acceptedCards"
-                                        aria-describedby="acceptedCards">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <i class="fa-brands fa-cc-mastercard fa-xl" style="color: #ffffff;"></i>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-3">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <input class="form-check-input" type="radio" name="action" id="acceptedCards"
-                                        aria-describedby="acceptedCards">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <i class="fa-brands fa-cc-visa fa-xl" style="color: #ffffff;"></i>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-3">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <input class="form-check-input" type="radio" name="action" id="acceptedCards"
-                                        aria-describedby="acceptedCards">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <i class="fa-brands fa-cc-diners-club fa-xl" style="color: #ffffff;"></i>
-                                    </div>
-                                </div>
-                                
-                            </div>
-    
-                            <div class="col-md-3 ">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <input class="form-check-input" type="radio" name="action" id="acceptedCards"
-                                        aria-describedby="acceptedCards">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <i class="fa-brands fa-cc-amex fa-xl" style="color: #ffffff;"></i>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-    
+               
+                <div class="col-md-6">
+                    <div>
+                        <label for="acceptedCards" id="acceptedCards" class="form-check-label" >We accept:</label>
+                    </div>
+                    <div class="col-md-6 bg-secondary p-2 rounded-2 ms-1 mt-2">
+                        <input class="form-check-input" type="radio" name="action" id="acceptedCards"aria-describedby="acceptedCards">
+                        <i class="fa-brands fa-cc-mastercard fa-xl" style="color: #ffffff;"></i>
+                        <input class="form-check-input" type="radio" name="action" id="acceptedCards"aria-describedby="acceptedCards">
+                        <i class="fa-brands fa-cc-visa fa-xl" style="color: #ffffff;"></i>
+                        <input class="form-check-input" type="radio" name="action" id="acceptedCards"aria-describedby="acceptedCards">
+                        <i class="fa-brands fa-cc-diners-club fa-xl" style="color: #ffffff;"></i>
+                        <input class="form-check-input" type="radio" name="action" id="acceptedCards"aria-describedby="acceptedCards">
+                        <i class="fa-brands fa-cc-amex fa-xl" style="color: #ffffff;"></i>
+                    </div>
                 </div>
                 <!-- Fin Row Tipos pagos-->
 
-                <!--Mensaje-->
-                <div class="col-md-6">
-                    <label for="exampleFormControlTextarea1" class="form-label">Message:</label>
-                    <div>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <div>
-                        <p class="text-secondary">Add any notes here</p>
-                    </div>
+                <!--Campo Mensaje-->
+                <div class="col-md-6 mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
-                <!--Fin mensaje-->
+                <!--Fin Campo Mensaje-->
 
             </div>
             <!--Fin Row Tipos Pago + Mensaje-->
-
-            <!--Sección Footer con Botones Submit-->
-            <div class="footer text-bg-light p-3">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="btn btn-primary me-md-2 bg-secondary border-secondary" type="button">Cancel</button>
-                    <button class="btn btn-primary" type="button">Send</button>
-                </div>
-            </div>
-            <!--Fin Footer con Botones Submit-->
         </form>
         <!-- Fin Formulario-->
+
+         <!--Sección Footer con Botones Submit-->
+         <div class="row footer text-bg-light p-3">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2 bg-secondary border-secondary" type="button">Cancel</button>
+                <button class="btn btn-primary" type="submit">Send</button>
+            </div>
+        </div>
+        <!--Fin Footer con Botones Submit-->
 
 
 
