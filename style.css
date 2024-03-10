@@ -1,0 +1,16 @@
+.formHeader {
+    font-family: ;
+    font-size: medium;
+    font-weight: 500;
+    background-color: #f7f7f7;
+}
+
+form {
+    margin-top: 10px;
+}
+
+label {
+    font-weight: 500;
+}
+
+

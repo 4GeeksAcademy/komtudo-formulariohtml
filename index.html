@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario HTML</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/7643a4ceec.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Tengo que escribir 100 veces: ... TODO AL CONTAINER, TODO AL CONTAINER, TODO AL CONTAINER...-->
+    <div class="container mt-5 border border-2">
+
+        <!-- Row Título -->
+        <div class="row">
+            <div class="formHeader col-md-12 padding-10 border-bottom">
+                <h1>Payment form example</h1>
+            </div>
+        </div>
+        <!-- Fin Row Título -->
+
+        <!-- Mensaje Error-->
+        <div
+            class="card-body bg-danger-subtle fs-6 rounded-2 p-3 mt-3 text-danger-emphasis border-danger-subtle border-1">
+            Some fields are missing
+        </div>
+        <!-- fin Mensaje Error-->
+
+        <!-- Empieza el formulario-->
+        <form>
+            <!--Row Datos Tarjeta-->
+            <div class="row">
+
+                <div class="col-md-5 mb-3">
+                    <label for="campoNumTarj" class="form-label">Card #</label>
+                    <input type="number" class="form-control" id="campoNumTarj" aria-describedby="cardlHelp"
+                        placeholder="xxxxxxxxxxxxxxxx">
+                    <div id="cradHelp" class="form-text"></div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <label for="campoCVC" class="form-label">CVC</label>
+                    <input type="number" class="form-control" id="campoCVC" aria-describedby="cvclHelp"
+                        placeholder="0000">
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label for="amount" class="form-label">Amount</label>
+                    <div class="input-group"><span class="input-group-addon"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-currency-dollar"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                            </svg></span>
+                        <input type="number" class="form-control" id="amount" placeholder="Amount"
+                            aria-describedby="amount">
+                    </div>
+                </div>
+            </div>
+            <!--Fin Row Datos Tarjeta-->
+
+
+
+            <!--Row Datos Persona-->
+            <div class="row">
+                <div class="col-md-6">
+                    First name
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" aria-label="FirstName" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    Last name
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" aria-label="LastName" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+            </div>
+            <!--Fin Row Datos Persona-->
+
+
+
+            <!--Row Datos Ubicacion-->
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="city" class="form-label">City</label>
+                    <div class="input-group ">
+                        <input type="text" class="form-control" aria-label="City" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class=" col-md-3 ">
+
+                    <label for="state" class="form-label">State</label>
+                    <select class="form-select" id="state" aria-label="pickAstate">
+                        <option selected>Pick a state</option>
+                        <option value="1">Madrid</option>
+                        <option value="2">Barcelona</option>
+                        <option value="3">Valencia</option>
+                        <option value="4">Sevilla</option>
+                        <option value="5">Galicia</option>
+                        <option value="6">León </option>
+
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    Postal code
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" aria-label="PostalCode"
+                            aria-describedby="basic-addon1">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Fin Row Datos Ubicación-->
+
+
+
+            <!--Row Tipos Pago + Mensaje -->
+            <div class="row d-flex flex-nowrap">
+
+                <!--Row Tipos Pago-->
+                <div class="col-md-6 " >
+            
+                        <div class="row">
+                            <label for="acceptedCards" id="acceptedCards" class="form-check-label" >Weaccept:</label>
+                        </div>
+                        
+                        <div class="row col-md-6 bg-secondary p-2 rounded-2 ms-1 mt-2">
+                            <div class="col-md-3">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input class="form-check-input" type="radio" name="action" id="acceptedCards"
+                                        aria-describedby="acceptedCards">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <i class="fa-brands fa-cc-mastercard fa-xl" style="color: #ffffff;"></i>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-3">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input class="form-check-input" type="radio" name="action" id="acceptedCards"
+                                        aria-describedby="acceptedCards">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <i class="fa-brands fa-cc-visa fa-xl" style="color: #ffffff;"></i>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-3">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input class="form-check-input" type="radio" name="action" id="acceptedCards"
+                                        aria-describedby="acceptedCards">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <i class="fa-brands fa-cc-diners-club fa-xl" style="color: #ffffff;"></i>
+                                    </div>
+                                </div>
+                                
+                            </div>
+    
+                            <div class="col-md-3 ">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input class="form-check-input" type="radio" name="action" id="acceptedCards"
+                                        aria-describedby="acceptedCards">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <i class="fa-brands fa-cc-amex fa-xl" style="color: #ffffff;"></i>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+    
+                </div>
+                <!-- Fin Row Tipos pagos-->
+
+                <!--Mensaje-->
+                <div class="col-md-6">
+                    <label for="exampleFormControlTextarea1" class="form-label">Message:</label>
+                    <div>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div>
+                        <p class="text-secondary">Add any notes here</p>
+                    </div>
+                </div>
+                <!--Fin mensaje-->
+
+            </div>
+            <!--Fin Row Tipos Pago + Mensaje-->
+
+            <!--Sección Footer con Botones Submit-->
+            <div class="footer text-bg-light p-3">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-primary me-md-2 bg-secondary border-secondary" type="button">Cancel</button>
+                    <button class="btn btn-primary" type="button">Send</button>
+                </div>
+            </div>
+            <!--Fin Footer con Botones Submit-->
+        </form>
+        <!-- Fin Formulario-->
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
