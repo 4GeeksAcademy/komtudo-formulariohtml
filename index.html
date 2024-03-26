@@ -38,14 +38,14 @@
                 <div class="col-md-5 mb-3">
                     <label for="campoNumTarj" class="form-label">Card #</label>
                     <input type="text" class="form-control" id="campoNumTarj" aria-describedby="cardlHelp" pattern="[0-9]*"
-                        placeholder="xxxxxxxxxxxxxxxx">
+                        placeholder="xxxxxxxxxxxxxxxx" maxlength="16">
                     <div id="cradHelp" class="form-text"></div>
                 </div>
 
                 <div class="col-md-3 mb-3">
                     <label for="campoCVC" class="form-label">CVC</label>
                     <input type="text" class="form-control" id="campoCVC" aria-describedby="cvclHelp"
-                        placeholder="0000" pattern="[0-9]*">
+                        placeholder="0000" pattern="[0-9]*" maxlength="3">
                 </div>
 
                 <div class="col-md-4 mb-3">
@@ -149,17 +149,18 @@
 
             </div>
             <!--Fin Row Tipos Pago + Mensaje-->
+        <!--Sección Footer con Botones Submit-->
+            <div class="row footer text-bg-light p-3">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-primary me-md-2 bg-secondary border-secondary" type="button">Cancel</button>
+                    <button class="btn btn-primary" type="submit">Send</button>
+                </div>
+            </div>
+        <!--Fin Footer con Botones Submit-->
         </form>
         <!-- Fin Formulario-->
 
-         <!--Sección Footer con Botones Submit-->
-         <div class="row footer text-bg-light p-3">
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-primary me-md-2 bg-secondary border-secondary" type="button">Cancel</button>
-                <button class="btn btn-primary" type="submit">Send</button>
-            </div>
-        </div>
-        <!--Fin Footer con Botones Submit-->
+        
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
